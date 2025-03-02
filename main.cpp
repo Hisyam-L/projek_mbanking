@@ -4,7 +4,7 @@ int jml_user = 0;
 int main(){
 
     bool ulang = true,pilihan= true, loginulang = true;
-    int x, y,z;
+    int x, y, z;
     
     do
     {
@@ -22,40 +22,53 @@ int main(){
         {
         case 1 : do
         {
+            int NIK;
             system("cls");
-            cout << "Masukkan nama          : ";
-            getline(cin, akunarray[jml_user].nama);
-            cout << "Masukkan sandi         : ";
-            getline(cin, akunarray[jml_user].sandi);
-            cout << "Masukkan alamat        : ";
-            getline(cin, akunarray[jml_user].alamat);
-            cout << "Masukkan pekerjaan     : ";
-            getline(cin, akunarray[jml_user].pekerjaan);
-            cout << "Masukkan nomor telepon : ";
-            getline(cin, akunarray[jml_user].no_telp);
             cout << "Masukkan NIK           : ";
-            cin >> akunarray[jml_user].NIK;
-            cin.ignore(); 
-        
-            system("cls");
-            cout << "\nNama         : " << akunarray[jml_user].nama ;
-            cout << "\nSandi        : " << akunarray[jml_user].sandi ;
-            cout << "\nAlamat       : " << akunarray[jml_user].alamat ;
-            cout << "\nPekerjaan    : " << akunarray[jml_user].pekerjaan ;
-            cout << "\nNomor Telepon: " << akunarray[jml_user].no_telp;
-            cout << "\nNIK          : " << akunarray[jml_user].NIK <<endl;
-            // cin.get();
-            do
+            cin >> NIK;
+            
+            bool check = check_daftar_akun_baru(NIK);
+            
+            cin.ignore();
+            
+            if (check == true)
             {
-                cout << "Apakah Data Anda Sudah Benar\n1). Benar\n2). Salah\n"; cin >> x;
-                if(x == 1){
-                    jml_user++;
-                    pilihan = false;
-                }
-                else if(x == 2){
-                    pilihan = true;
-                }
-            } while (x != 1 && x != 2);
+                    cout << "Masukkan nama          : ";
+                    getline(cin, akunarray[jml_user].nama);
+                    cout << "Masukkan sandi         : ";
+                    getline(cin, akunarray[jml_user].sandi);
+                    cout << "Masukkan alamat        : ";
+                    getline(cin, akunarray[jml_user].alamat);
+                    cout << "Masukkan pekerjaan     : ";
+                    getline(cin, akunarray[jml_user].pekerjaan);
+                    cout << "Masukkan nomor telepon : ";
+                    getline(cin, akunarray[jml_user].no_telp);
+                    
+                    cin.ignore(); 
+                
+                    system("cls");
+                    cout << "\nNama         : " << akunarray[jml_user].nama ;
+                    cout << "\nSandi        : " << akunarray[jml_user].sandi ;
+                    cout << "\nAlamat       : " << akunarray[jml_user].alamat ;
+                    cout << "\nPekerjaan    : " << akunarray[jml_user].pekerjaan ;
+                    cout << "\nNomor Telepon: " << akunarray[jml_user].no_telp;
+                    cout << "\nNIK          : " << akunarray[jml_user].NIK <<endl;
+                    // cin.get();
+                    do
+                    {
+                        cout << "Apakah Data Anda Sudah Benar\n1). Benar\n2). Salah\n"; cin >> x;
+                        if(x == 1){
+                            jml_user++;
+                            pilihan = false;
+                        }
+                        else if(x == 2){
+                            pilihan = true;
+                        }
+                    } while (x != 1 && x != 2);
+            }
+            
+
+
 
         } while (pilihan == true);
         

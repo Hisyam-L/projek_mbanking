@@ -1,7 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <string>
-using namespace std;
+#include <data.cpp>
 
 struct Akun
 {
@@ -19,15 +16,11 @@ struct Login
     string sandiLogin;
 };
 
-struct Data
-{
-    string nama;
-    int jumlah_saldo;
-    int jumlah_pinjaman;
-};
+
+
 
 Akun akunarray[1000];
-Data dataarray[1000];
+
 
 void pilihanmember()
 {
@@ -42,8 +35,7 @@ void pilihanmember()
     case 1:
         system("cls");
         cout << "Berikut jumlah saldo anda: ";
-        getline(cin, namamembercheck);
-        cout << "Saldo untuk member " << namamembercheck << " adalah ...\n";
+        cout << "\nSaldo untuk member " << namamembercheck << " adalah ...\n";
         break;
 
     case 2:
@@ -66,4 +58,25 @@ void pilihanmember()
         cout << "Pilihan tidak valid. Silakan coba lagi.\n";
         break;
     }
+}
+
+bool check_daftar_akun_baru(int NIK){
+    int left = 0;
+    int size = sizeof(dataarray) / sizeof(dataarray[0]);
+    int right = size - 1;
+
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+
+        if (dataarray[mid].NIK == NIK) {
+            return true; // Elemen ditemukan, kembalikan indeks
+        }
+
+        if (dataarray[mid].NIK < NIK) {
+            left = mid + 1; // Cari di sisi kanan
+        } else {
+            right = mid - 1; // Cari di sisi kiri
+        }
+    }
+    return false;
 }
