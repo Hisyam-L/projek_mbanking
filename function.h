@@ -1,5 +1,4 @@
-#include <data.cpp>
-
+#include "data.cpp"
 struct Akun
 {
     string nama;

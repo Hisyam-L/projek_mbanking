@@ -66,6 +66,28 @@ int main(){
                         }
                     } while (x != 1 && x != 2);
             }
+            else{
+            cout << "Data NIK tidak ada \n";
+            int keluar1 = 1;
+            do
+            {
+                cout << "Apakah anda ingin keluar ?\nYa(1):";cin >> keluar1;
+                        if (keluar1 == 1)
+                        {
+                            pilihan = true;
+                            keluar1 = 0;
+                        }
+                        else if (keluar1 != 1)
+                        {
+                            keluar1 = 0;
+                        }
+                        
+                        
+            
+            } while (keluar1 == 1);
+            
+            
+            }
             
 
 
