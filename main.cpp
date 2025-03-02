@@ -4,7 +4,7 @@ int jml_user = 0;
 int main(){
 
     bool ulang = true,pilihan= true, loginulang = true;
-    int x;
+    int x, y,z;
     
     do
     {
