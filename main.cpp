@@ -53,7 +53,7 @@ int main(){
                     cout << "\nPekerjaan    : " << akunarray[jml_user].pekerjaan ;
                     cout << "\nNomor Telepon: " << akunarray[jml_user].no_telp;
                     cout << "\nNIK          : " << akunarray[jml_user].NIK <<endl;
-                    // cin.get();
+                    cin.get();
                     do
                     {
                         cout << "Apakah Data Anda Sudah Benar\n1). Benar\n2). Salah\n"; cin >> x;
@@ -69,9 +69,9 @@ int main(){
             else{
             cout << "Data NIK tidak ada \n";
             int keluar1 = 1;
-            do
-            {
-                cout << "Apakah anda ingin keluar ?\nYa(1):";cin >> keluar1;
+                do
+                {
+                    cout << "Apakah anda ingin keluar ?\nYa(1):";cin >> keluar1;
                         if (keluar1 == 1)
                         {
                             pilihan = true;
@@ -84,14 +84,9 @@ int main(){
                         
                         
             
-            } while (keluar1 == 1);
-            
+                } while (keluar1 == 1);
             
             }
-            
-
-
-
         } while (pilihan == true);
         
             break;
@@ -126,7 +121,7 @@ int main(){
                     cout << "Selamat datang " << akunarray[i].nama << endl;
                     cin.get();
 
-                    pilihanmember();
+                    pilihanmember(userlogin.namaLogin);
                     loginulang = false;
                     
 
