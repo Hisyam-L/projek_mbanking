@@ -30,13 +30,13 @@ bool check_daftar_akun_baru(int NIK){
         int mid = left + (right - left) / 2;
 
         if (dataarray[mid].NIK == NIK) {
-            return true; // Elemen ditemukan, kembalikan indeks
+            return true; 
         }
 
         if (dataarray[mid].NIK < NIK) {
-            left = mid + 1; // Cari di sisi kanan
+            left = mid + 1; 
         } else {
-            right = mid - 1; // Cari di sisi kiri
+            right = mid - 1; 
         }
     }
     return false;
@@ -47,7 +47,11 @@ int cariNIK(string username){
     {
         if (username == akunarray[i].nama)
         {
+            cout<<akunarray[i].NIK<<endl;
             return akunarray[i].NIK;
+        }
+        else{
+            return -1;
         }
         
     }
@@ -63,16 +67,16 @@ int cariTempatSaldo(int NIK){
         int mid = left + (right - left) / 2;
 
         if (dataarray[mid].NIK == NIK) {
-            return mid; // Elemen ditemukan, kembalikan indeks
+            return mid; 
         }
 
         if (dataarray[mid].NIK < NIK) {
-            left = mid + 1; // Cari di sisi kanan
+            left = mid + 1; 
         } else {
-            right = mid - 1; // Cari di sisi kiri
+            right = mid - 1; 
         }
     }
-    return false;
+    return -1;
 }
 
 void pilihanmember(string username)
@@ -88,9 +92,7 @@ void pilihanmember(string username)
     case 1:
         system("cls");
             cout << "Berikut jumlah saldo anda: ";
-                int NIKcari = cariNIK(username);
-                int index_saldo = cariTempatSaldo(NIKcari);
-            cout << "\nSaldo untuk member " << dataarray[NIKcari].jumlah_saldo << " adalah ...\n";
+            cout << "\nSaldo untuk member " << dataarray[cariTempatSaldo(cariNIK(username))].jumlah_saldo << " adalah ...\n";
         break;
 
     case 2:
@@ -108,9 +110,7 @@ void pilihanmember(string username)
     case 5:
     system("cls");
             cout << "Berikut jumlah pinjaman anda : ";
-                int NIKcari = cariNIK(username);
-                int index_saldo = cariTempatSaldo(NIKcari);
-            cout << "\nJumlah pinjaman : " << dataarray[NIKcari].jumlah_pinjaman << " adalah ...\n";
+            cout << "\nJumlah pinjaman : " << dataarray[cariTempatSaldo(cariNIK(username))].jumlah_pinjaman << " adalah ...\n";
         break;
 
     case 6:

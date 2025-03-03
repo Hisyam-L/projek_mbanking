@@ -71,20 +71,26 @@ int main(){
             int keluar1 = 1;
                 do
                 {
-                    cout << "Apakah anda ingin keluar ?\nYa(1):";cin >> keluar1;
+                    cout << "Apakah anda ingin keluar  tidak (1) / ya (2)\n";cin >> keluar1;
                         if (keluar1 == 1)
                         {
                             pilihan = true;
-                            keluar1 = 0;
+                            keluar1 = 1;
+
                         }
-                        else if (keluar1 != 1)
+                        else if (keluar1 == 2)
                         {
-                            keluar1 = 0;
+                            keluar1 = 1;
+                            pilihan = false;
+                        }
+                        else{
+                            cout << "Pilihan tidak ada\n";
+                            cin.get();
                         }
                         
                         
             
-                } while (keluar1 == 1);
+                } while (keluar1 == 0);
             
             }
         } while (pilihan == true);
@@ -121,7 +127,7 @@ int main(){
                     cout << "Selamat datang " << akunarray[i].nama << endl;
                     cin.get();
 
-                    pilihanmember(userlogin.namaLogin);
+                    pilihanmember(akunarray[i].nama);
                     loginulang = false;
                     
 
