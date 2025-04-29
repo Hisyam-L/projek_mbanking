@@ -126,7 +126,7 @@ int main(){
                     akun_ditemukan = true;
                     cout << "Selamat datang " << akunarray[i].nama << endl;
                     cin.get();
-
+                    
                     pilihanmember(akunarray[i].nama);
                     loginulang = false;
                     

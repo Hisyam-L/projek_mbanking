@@ -3,6 +3,8 @@
 #include <string>
 using namespace std;
 
+int jumlah_bayar = 0;
+
 struct Data
 {
     int NIK;
@@ -37,3 +39,23 @@ Data dataarray[100] = {
     {93, 450000, 225000}, {94, 150000, 75000}, {95, 500000, 250000}, {96, 350000, 175000},
     {97, 600000, 300000}, {98, 200000, 100000}, {99, 550000, 275000}, {100, 150000, 75000}
 };
+
+
+struct riwayat_pembayaran{
+  int NIK;
+  int jumlah_pembayaran;  
+};
+
+riwayat_pembayaran pembayaran[100];
+
+void sortPembayaran(riwayat_pembayaran pembayaran[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (pembayaran[j].jumlah_pembayaran < pembayaran[j + 1].jumlah_pembayaran) {
+                riwayat_pembayaran temp = pembayaran[j];
+                pembayaran[j] = pembayaran[j + 1];
+                pembayaran[j + 1] = temp;
+            }
+        }
+    }
+}

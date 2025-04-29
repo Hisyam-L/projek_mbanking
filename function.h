@@ -79,47 +79,88 @@ int cariTempatSaldo(int NIK){
     return -1;
 }
 
-void pilihanmember(string username)
-{
-    system("cls");
-    int pilihan;
-    string namamembercheck;
-    cout << "Pilihan anda sebagai member bank CIHUY\n1. Lihat saldo\n2. Pembayaran\n3. Transfer\n4. Mutasi saldo\n5. Jumlah pinjaman\n6. Kembali ke menu utama\n";
-    cin >> pilihan;
-
-    switch (pilihan)
-    {
-    case 1:
+void pilihanmember(string username) {
+    bool kembalimenu = true; int userNIK = cariNIK(username);
+    do {
         system("cls");
-            cout << "Berikut jumlah saldo anda: ";
-            cout << "\nSaldo untuk member " << dataarray[cariTempatSaldo(cariNIK(username))].jumlah_saldo << " adalah ...\n";
-        break;
+        int pilihan, banyakpembayaran;
+        cout << "Pilihan anda sebagai member bank CIHUY\n"
+             << "1. Lihat saldo\n"
+             << "2. Pembayaran\n"
+             << "3. Transfer\n"
+             << "4. Mutasi saldo\n"
+             << "5. Jumlah pinjaman\n"
+             << "6. Kembali ke menu utama\n"
+             << "7. Lihat Riwayat transaksi\n";
+        cin >> pilihan;
 
-    case 2:
-        cout << "Berikut jumlah saldo anda: ";
-        break;
+        switch (pilihan) {
+            case 1:
+                system("cls");
+                cout << "Berikut jumlah saldo anda: ";
+                cout << "\nSaldo untuk member " << dataarray[cariTempatSaldo(cariNIK(username))].jumlah_saldo << " adalah ...\n";
+                cin.get();
+                break;
 
-    case 3:
-        cout << "Berikut jumlah saldo anda: ";
-        break;
+            case 2:
+                cout << "Berapa yang ingin anda bayar: ";
+                cin >> banyakpembayaran;
 
-    case 4:
-        cout << "Berikut jumlah saldo anda: ";
-        break;
+                if (banyakpembayaran > dataarray[cariTempatSaldo(cariNIK(username))].jumlah_saldo) {
+                    cout << "\nSaldo anda kurang\nSaldo anda saat ini adalah " << dataarray[cariTempatSaldo(cariNIK(username))].jumlah_saldo;
+                    cin.get();
+                } else {
+                    dataarray[cariTempatSaldo(cariNIK(username))].jumlah_saldo -= banyakpembayaran;
+                    cout << "Jumlah saldo sisanya adalah: " << dataarray[cariTempatSaldo(cariNIK(username))].jumlah_saldo << endl;
 
-    case 5:
-    system("cls");
-            cout << "Berikut jumlah pinjaman anda : ";
-            cout << "\nJumlah pinjaman : " << dataarray[cariTempatSaldo(cariNIK(username))].jumlah_pinjaman << " adalah ...\n";
-        break;
+                    pembayaran[jumlah_bayar].NIK = cariNIK(username);
+                    pembayaran[jumlah_bayar].jumlah_pembayaran = banyakpembayaran;
+                    jumlah_bayar++;
+                    cin.get();
+                }
+                break;
 
-    case 6:
-        cout << "Berikut jumlah saldo anda: ";
-        break;
-        
-    default:
-        cout << "Pilihan tidak valid. Silakan coba lagi.\n";
-        break;
-    }
+            case 3:
+                cout << "Fitur transfer belum tersedia.\n";
+                cin.get();
+                break;
+
+            case 4:
+                cout << "Fitur mutasi saldo belum tersedia.\n";
+                cin.get();
+                break;
+
+            case 5:
+                system("cls");
+                cout << "Berikut jumlah pinjaman anda: ";
+                cout << "\nJumlah pinjaman: " << dataarray[cariTempatSaldo(cariNIK(username))].jumlah_pinjaman << " adalah ...\n";
+                cin.get();
+                break;
+
+            case 6:
+                kembalimenu = false;
+                break;
+
+            case 7:
+                if (userNIK != -1) {
+                    cout << "NIK: " << userNIK << endl;
+                    cout << "Riwayat Pembayaran:\n";
+                    for (int i = 0; i < jumlah_bayar; i++) {
+                        if (pembayaran[i].NIK == userNIK) {
+                            cout << "Jumlah: " << pembayaran[i].jumlah_pembayaran << endl;
+                        }
+                    }
+                } else {
+                    cout << "Akun tidak ditemukan.\n";
+                    
+                }
+                cin.get();
+                break;
+
+            default:
+                cout << "Pilihan tidak valid. Silakan coba lagi.\n";
+                cin.get();
+                break;
+        }
+    } while (kembalimenu);
 }
-
