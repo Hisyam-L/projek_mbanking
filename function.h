@@ -113,10 +113,10 @@ void pilihanmember(string username) {
                     dataarray[cariTempatSaldo(cariNIK(username))].jumlah_saldo -= banyakpembayaran;
                     cout << "Jumlah saldo sisanya adalah: " << dataarray[cariTempatSaldo(cariNIK(username))].jumlah_saldo << endl;
 
-                    pembayaran[jumlah_bayar].NIK = cariNIK(username);
+                    pembayaran[jumlah_bayar].NIK = userNIK;
                     pembayaran[jumlah_bayar].jumlah_pembayaran = banyakpembayaran;
                     jumlah_bayar++;
-                    cin.get();
+                    system("pause");
                 }
                 break;
 
@@ -145,11 +145,12 @@ void pilihanmember(string username) {
                 if (userNIK != -1) {
                     cout << "NIK: " << userNIK << endl;
                     cout << "Riwayat Pembayaran:\n";
-                    for (int i = 0; i < jumlah_bayar; i++) {
+                    for (int i = 0; i < 100; i++) {
                         if (pembayaran[i].NIK == userNIK) {
                             cout << "Jumlah: " << pembayaran[i].jumlah_pembayaran << endl;
                         }
                     }
+                    system("pause");
                 } else {
                     cout << "Akun tidak ditemukan.\n";
                     
