@@ -142,6 +142,7 @@ void pilihanmember(string username) {
                 break;
 
             case 7:
+                sortPembayaran(pembayaran,100);
                 if (userNIK != -1) {
                     cout << "NIK: " << userNIK << endl;
                     cout << "Riwayat Pembayaran:\n";
