@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm> 
 using namespace std;
 
 int jumlah_bayar = 0;
@@ -11,6 +12,7 @@ struct Data
     int jumlah_saldo;
     int jumlah_pinjaman;
 };
+
 
 Data dataarray[100] = {
     {1, 500000, 200000}, {2, 150000, 50000}, {3, 300000, 100000}, {4, 700000, 300000},
@@ -48,14 +50,23 @@ struct riwayat_pembayaran{
 
 riwayat_pembayaran pembayaran[100];
 
-void sortPembayaran(riwayat_pembayaran pembayaran[], int n) {
-    for (int i = 0; i < n - 1; i++) {
-        for (int j = 0; j < n - i - 1; j++) {
-            if (pembayaran[j].jumlah_pembayaran < pembayaran[j + 1].jumlah_pembayaran) {
-                riwayat_pembayaran temp = pembayaran[j];
-                pembayaran[j] = pembayaran[j + 1];
-                pembayaran[j + 1] = temp;
-            }
-        }
-    }
-}
+struct Akun
+{
+    string nama;
+    string sandi;
+    string alamat;
+    string pekerjaan;
+    string no_telp;
+    int NIK;
+};
+
+struct Login
+{
+    string namaLogin;
+    string sandiLogin;
+};
+
+
+
+
+Akun akunarray[100];

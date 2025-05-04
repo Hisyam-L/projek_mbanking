@@ -1,25 +1,14 @@
 #include "data.cpp"
-struct Akun
-{
-    string nama;
-    string sandi;
-    string alamat;
-    string pekerjaan;
-    string no_telp;
-    int NIK;
-};
 
-struct Login
-{
-    string namaLogin;
-    string sandiLogin;
-};
-
-
-
-
-Akun akunarray[100];
-
+void sortPembayaran(riwayat_pembayaran pembayaran[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n-i-1; j++) {
+            if (pembayaran[j].jumlah_pembayaran < pembayaran[j + 1].jumlah_pembayaran) {
+                swap(pembayaran[j], pembayaran[j+1]);
+            }
+        }
+    }
+}
 
 bool check_daftar_akun_baru(int NIK){
     int left = 0;
@@ -42,20 +31,16 @@ bool check_daftar_akun_baru(int NIK){
     return false;
 }
 
-int cariNIK(string username){
-    for (int i = 0; i < 100; i++)
-    {
-        if (username == akunarray[i].nama)
-        {
-            cout<<akunarray[i].NIK<<endl;
+
+
+int cariNIK(string username) {
+    for (int i = 0; i < 100; i++) {
+        if (username == akunarray[i].nama) {
+            cout << akunarray[i].NIK << endl;
             return akunarray[i].NIK;
         }
-        else{
-            return -1;
-        }
-        
     }
-    
+    return -1; 
 }
 
 int cariTempatSaldo(int NIK){
@@ -80,7 +65,10 @@ int cariTempatSaldo(int NIK){
 }
 
 void pilihanmember(string username) {
-    bool kembalimenu = true; int userNIK = cariNIK(username);
+    bool kembalimenu = true; 
+    int userNIK = cariNIK(username);
+    int letak_akun = cariTempatSaldo(userNIK);
+
     do {
         system("cls");
         int pilihan, banyakpembayaran;
@@ -91,14 +79,18 @@ void pilihanmember(string username) {
              << "4. Mutasi saldo\n"
              << "5. Jumlah pinjaman\n"
              << "6. Kembali ke menu utama\n"
-             << "7. Lihat Riwayat transaksi\n";
+             << "7. Lihat Riwayat transaksi\n"
+             << "Masukan pilihan anda : ";
         cin >> pilihan;
 
         switch (pilihan) {
+
             case 1:
                 system("cls");
                 cout << "Berikut jumlah saldo anda: ";
-                cout << "\nSaldo untuk member " << dataarray[cariTempatSaldo(cariNIK(username))].jumlah_saldo << " adalah ...\n";
+                cout << "\nSaldo dengan nama " << username << " adalah :" << dataarray[letak_akun].jumlah_saldo;
+                cout << "\nTekan Enter untuk melanjutkan...\n";
+                cin.ignore();
                 cin.get();
                 break;
 
@@ -106,34 +98,43 @@ void pilihanmember(string username) {
                 cout << "Berapa yang ingin anda bayar: ";
                 cin >> banyakpembayaran;
 
-                if (banyakpembayaran > dataarray[cariTempatSaldo(cariNIK(username))].jumlah_saldo) {
-                    cout << "\nSaldo anda kurang\nSaldo anda saat ini adalah " << dataarray[cariTempatSaldo(cariNIK(username))].jumlah_saldo;
+                if (banyakpembayaran > dataarray[letak_akun].jumlah_saldo) {
+                    cout << "\nSaldo anda kurang\nSaldo anda saat ini adalah " << dataarray[letak_akun].jumlah_saldo;
+                    cin.ignore();
                     cin.get();
                 } else {
                     dataarray[cariTempatSaldo(cariNIK(username))].jumlah_saldo -= banyakpembayaran;
-                    cout << "Jumlah saldo sisanya adalah: " << dataarray[cariTempatSaldo(cariNIK(username))].jumlah_saldo << endl;
+                    cout << "Jumlah saldo sisanya adalah: " << dataarray[letak_akun].jumlah_saldo << endl;
 
                     pembayaran[jumlah_bayar].NIK = userNIK;
                     pembayaran[jumlah_bayar].jumlah_pembayaran = banyakpembayaran;
                     jumlah_bayar++;
-                    system("pause");
+                    cout << "\nTekan Enter untuk melanjutkan...\n";
+                    cin.ignore();
+                    cin.get();
                 }
                 break;
 
             case 3:
                 cout << "Fitur transfer belum tersedia.\n";
+                cout << "\nTekan Enter untuk melanjutkan...\n";
+                cin.ignore();
                 cin.get();
                 break;
 
             case 4:
                 cout << "Fitur mutasi saldo belum tersedia.\n";
+                cout << "\nTekan Enter untuk melanjutkan...\n";
+                cin.ignore();
                 cin.get();
                 break;
 
             case 5:
                 system("cls");
-                cout << "Berikut jumlah pinjaman anda: ";
-                cout << "\nJumlah pinjaman: " << dataarray[cariTempatSaldo(cariNIK(username))].jumlah_pinjaman << " adalah ...\n";
+                cout << "NIK                          : " << userNIK << endl;
+                cout << "Berikut jumlah pinjaman anda : "<< dataarray[letak_akun].jumlah_pinjaman ;
+                cout << "\nTekan Enter untuk melanjutkan...\n";
+                cin.ignore();
                 cin.get();
                 break;
 
@@ -142,25 +143,32 @@ void pilihanmember(string username) {
                 break;
 
             case 7:
+                system("cls");
                 sortPembayaran(pembayaran,100);
                 if (userNIK != -1) {
-                    cout << "NIK: " << userNIK << endl;
+                    cout << "NIK               : " << userNIK << endl;
                     cout << "Riwayat Pembayaran:\n";
                     for (int i = 0; i < 100; i++) {
                         if (pembayaran[i].NIK == userNIK) {
                             cout << "Jumlah: " << pembayaran[i].jumlah_pembayaran << endl;
                         }
                     }
-                    system("pause");
+
+
                 } else {
                     cout << "Akun tidak ditemukan.\n";
                     
                 }
+                cout << "\nTekan Enter untuk melanjutkan...\n";
+                cin.ignore();
                 cin.get();
+
                 break;
 
             default:
                 cout << "Pilihan tidak valid. Silakan coba lagi.\n";
+                cout << "\nTekan Enter untuk melanjutkan...\n";
+                cin.ignore();
                 cin.get();
                 break;
         }

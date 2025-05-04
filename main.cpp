@@ -16,48 +16,49 @@ int main(){
         cout << "\n3. Keluar";
         cout << "\n\nPilih menu : ";
         cin >> pil;
-        cin.ignore();
 
         switch (pil)
         {
         case 1 : do
         {
             int NIK;
+            Akun dummyakun;
             system("cls");
             cout << "Masukkan NIK           : ";
-            cin >> NIK;
-            
-            bool check = check_daftar_akun_baru(NIK);
-            
+            cin >> dummyakun.NIK;
             cin.ignore();
+            
+            bool check = check_daftar_akun_baru(dummyakun.NIK);
+            
             
             if (check == true)
             {
                     cout << "Masukkan nama          : ";
-                    getline(cin, akunarray[jml_user].nama);
+                    getline(cin, dummyakun.nama);
                     cout << "Masukkan sandi         : ";
-                    getline(cin, akunarray[jml_user].sandi);
+                    getline(cin, dummyakun.sandi);
                     cout << "Masukkan alamat        : ";
-                    getline(cin, akunarray[jml_user].alamat);
+                    getline(cin, dummyakun.alamat);
                     cout << "Masukkan pekerjaan     : ";
-                    getline(cin, akunarray[jml_user].pekerjaan);
+                    getline(cin, dummyakun.pekerjaan);
                     cout << "Masukkan nomor telepon : ";
-                    getline(cin, akunarray[jml_user].no_telp);
+                    getline(cin, dummyakun.no_telp);
                     
                     cin.ignore(); 
                 
                     system("cls");
-                    cout << "\nNama         : " << akunarray[jml_user].nama ;
-                    cout << "\nSandi        : " << akunarray[jml_user].sandi ;
-                    cout << "\nAlamat       : " << akunarray[jml_user].alamat ;
-                    cout << "\nPekerjaan    : " << akunarray[jml_user].pekerjaan ;
-                    cout << "\nNomor Telepon: " << akunarray[jml_user].no_telp;
-                    cout << "\nNIK          : " << akunarray[jml_user].NIK <<endl;
+                    cout << "\nNama         : " << dummyakun.nama ;
+                    cout << "\nSandi        : " << dummyakun.sandi ;
+                    cout << "\nAlamat       : " << dummyakun.alamat ;
+                    cout << "\nPekerjaan    : " << dummyakun.pekerjaan ;
+                    cout << "\nNomor Telepon: " << dummyakun.no_telp;
+                    cout << "\nNIK          : " << dummyakun.NIK <<endl;
                     cin.get();
                     do
                     {
                         cout << "Apakah Data Anda Sudah Benar\n1). Benar\n2). Salah\n"; cin >> x;
                         if(x == 1){
+                            akunarray[jml_user] = dummyakun;
                             jml_user++;
                             pilihan = false;
                         }
@@ -113,6 +114,9 @@ int main(){
             Login userlogin;
             int pilihanlogin;
             system("cls");
+
+            cin.ignore();
+            
             cout << "Masukkan nama          : ";
             getline(cin, userlogin.namaLogin);
             cout << "Masukkan sandi         : ";
