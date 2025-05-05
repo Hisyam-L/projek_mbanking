@@ -1,4 +1,5 @@
 #include <iostream>
+#include <conio.h>
 #include <vector>
 #include <string>
 #include <algorithm> 
@@ -14,7 +15,7 @@ struct Data
 };
 
 
-Data dataarray[100] = {
+Data rekening[200] = {
     {1, 500000, 200000}, {2, 150000, 50000}, {3, 300000, 100000}, {4, 700000, 300000},
     {5, 250000, 100000}, {6, 450000, 200000}, {7, 100000, 50000}, {8, 350000, 150000},
     {9, 600000, 250000}, {10, 200000, 100000}, {11, 800000, 350000}, {12, 300000, 150000},
@@ -48,7 +49,7 @@ struct riwayat_pembayaran{
   int jumlah_pembayaran;  
 };
 
-riwayat_pembayaran pembayaran[100];
+riwayat_pembayaran pembayaran[200];
 
 struct Akun
 {
@@ -67,6 +68,4 @@ struct Login
 };
 
 
-
-
-Akun akunarray[100];
+Akun akun[200];
