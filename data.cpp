@@ -46,7 +46,8 @@ Data rekening[200] = {
 
 struct riwayat_pembayaran{
   int NIK;
-  int jumlah_pembayaran;  
+  int jumlah_pembayaran;
+  int counter;  
 };
 
 riwayat_pembayaran pembayaran[200];

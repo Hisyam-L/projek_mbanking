@@ -16,12 +16,73 @@ void sortingrekening() { //pakai shell sort hehehe
 
 
 void sortPembayaran(riwayat_pembayaran pembayaran[], int n) {
-    for (int i = 0; i < n - 1; i++) {
-        for (int j = 0; j < n-i-1; j++) {
-            if (pembayaran[j].jumlah_pembayaran < pembayaran[j + 1].jumlah_pembayaran) {
-                swap(pembayaran[j], pembayaran[j+1]);
+    system("cls");
+    int a,b,c;
+    cout << "Urutkan berdasar :\n1> Waktu transaksi\n2> Nominal transaksi\n";
+    cin >> a;
+
+    switch (a)
+    {
+    case 1:
+        cout << "Urutkan dari :\n1> Terbaru\n2> Terlama\n";
+        cin >> b;
+
+        switch(b){
+        case 1:
+        system("cls");
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (pembayaran[j].counter < pembayaran[j + 1].counter) {
+                    swap(pembayaran[j], pembayaran[j + 1]);
+                }
             }
         }
+        break;
+        
+        case 2:
+        system("cls");
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (pembayaran[j].counter > pembayaran[j + 1].counter) {
+                    swap(pembayaran[j], pembayaran[j + 1]);
+                }
+            }
+        }
+        break;
+        }
+    break;
+    
+    case 2:
+        cout << "Urutkan dari :\n1> Terbesar\n2> Terkecil\n";
+        cin >> c;
+
+        switch(c){
+        system("cls");
+        case 1:
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n-i-1; j++) {
+                if (pembayaran[j].jumlah_pembayaran < pembayaran[j + 1].jumlah_pembayaran) {
+                    swap(pembayaran[j], pembayaran[j+1]);
+                }
+            }
+        }
+        break;
+
+        case 2:
+        system("cls");
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n-i-1; j++) {
+                if (pembayaran[j].jumlah_pembayaran > pembayaran[j + 1].jumlah_pembayaran) {
+                    swap(pembayaran[j], pembayaran[j+1]);
+                }
+            }
+        }
+        break;
+        }    
+    break;
+    
+    default:
+        break;
     }
 }
 
@@ -114,20 +175,21 @@ void pilihanmember(string username) {
             cin >> banyakpembayaran;
             
             if (banyakpembayaran > rekening[letak_akun].jumlah_saldo) {
-                    cout << "\nSaldo anda kurang\nSaldo anda saat ini adalah " << rekening[letak_akun].jumlah_saldo;
-                    cin.ignore();
-                    cin.get();
-                } else {
-                    rekening[cariTempatSaldo(cariNIK(username))].jumlah_saldo -= banyakpembayaran;
-                    cout << "Jumlah saldo sisanya adalah: " << rekening[letak_akun].jumlah_saldo << endl;
-                    
-                    pembayaran[jumlah_bayar].NIK = userNIK;
-                    pembayaran[jumlah_bayar].jumlah_pembayaran = banyakpembayaran;
-                    jumlah_bayar++;
-                    cout << "\nTekan Enter untuk melanjutkan...\n";
-                    cin.ignore();
-                    cin.get();
-                }
+                cout << "\nSaldo anda kurang\nSaldo anda saat ini adalah " << rekening[letak_akun].jumlah_saldo;
+                cin.ignore();
+                cin.get();
+            } else {
+                rekening[cariTempatSaldo(cariNIK(username))].jumlah_saldo -= banyakpembayaran;
+                cout << "Jumlah saldo sisanya adalah: " << rekening[letak_akun].jumlah_saldo << endl;
+                
+                pembayaran[jumlah_bayar].NIK = userNIK;
+                pembayaran[jumlah_bayar].jumlah_pembayaran = banyakpembayaran;
+                pembayaran[jumlah_bayar].counter = jumlah_bayar; 
+                jumlah_bayar++;
+                cout << "\nTekan Enter untuk melanjutkan...\n";
+                cin.ignore();
+                cin.get();
+            }
                 break;
                 
                 case 3:
@@ -159,13 +221,13 @@ void pilihanmember(string username) {
                 
                 case 7:
                 system("cls");
-                sortPembayaran(pembayaran,100);
+                sortPembayaran(pembayaran,200);
                 if (userNIK != -1) {
                     cout << "NIK               : " << userNIK << endl;
                     cout << "Riwayat Pembayaran:\n";
-                    for (int i = 0; i < 100; i++) {
+                    for (int i = 0; i < 200; i++) {
                         if (pembayaran[i].NIK == userNIK) {
-                            cout << "Jumlah: " << pembayaran[i].jumlah_pembayaran << endl;
+                            cout << i+1 << ". " << pembayaran[i].jumlah_pembayaran << endl;
                         }
                     }
                     
