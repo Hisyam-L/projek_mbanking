@@ -554,9 +554,9 @@ void sortTransaksi(mutasi arr[], int n, bool ascending)
         {
             bool swap;
             if (ascending)
-                swap = arr[j].nominal > arr[j + 1].nominal;
+                swap = abs(arr[j].nominal) > abs(arr[j + 1].nominal);
             else
-                swap = arr[j].nominal < arr[j + 1].nominal;
+                swap = abs(arr[j].nominal) < abs(arr[j + 1].nominal);
 
             if (swap)
             {
