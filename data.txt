@@ -1,0 +1,812 @@
+Nasabah ke-1
+User ID           : 1
+Nama Nasabah      : Oka
+Rekening Nasabah  : 123240001
+Saldo             : Rp. 325000.00
+Jumlah Transaksi  : 1
+Riwayat Transaksi :
+  1. Transfer masuk +Rp25000
+----------------------------------
+
+Nasabah ke-2
+User ID           : 2
+Nama Nasabah      : Xenia
+Rekening Nasabah  : 123240002
+Saldo             : Rp. 250000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-3
+User ID           : 3
+Nama Nasabah      : Joko
+Rekening Nasabah  : 123240003
+Saldo             : Rp. 50000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-4
+User ID           : 4
+Nama Nasabah      : Oka
+Rekening Nasabah  : 123240004
+Saldo             : Rp. 300000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-5
+User ID           : 5
+Nama Nasabah      : Mega
+Rekening Nasabah  : 123240005
+Saldo             : Rp. 50000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-6
+User ID           : 6
+Nama Nasabah      : Lutfi
+Rekening Nasabah  : 123240006
+Saldo             : Rp. 300000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-7
+User ID           : 7
+Nama Nasabah      : Xenia
+Rekening Nasabah  : 123240007
+Saldo             : Rp. 250000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-8
+User ID           : 8
+Nama Nasabah      : Nina
+Rekening Nasabah  : 123240008
+Saldo             : Rp. 200000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-9
+User ID           : 9
+Nama Nasabah      : Sari
+Rekening Nasabah  : 123240009
+Saldo             : Rp. 100000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-10
+User ID           : 10
+Nama Nasabah      : Tono
+Rekening Nasabah  : 123240010
+Saldo             : Rp. 150000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-11
+User ID           : 11
+Nama Nasabah      : Vina
+Rekening Nasabah  : 123240011
+Saldo             : Rp. 300000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-12
+User ID           : 12
+Nama Nasabah      : Gita
+Rekening Nasabah  : 123240012
+Saldo             : Rp. 100000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-13
+User ID           : 13
+Nama Nasabah      : Andi
+Rekening Nasabah  : 123240013
+Saldo             : Rp. 50000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-14
+User ID           : 14
+Nama Nasabah      : Umi
+Rekening Nasabah  : 123240014
+Saldo             : Rp. 50000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-15
+User ID           : 15
+Nama Nasabah      : Hadi
+Rekening Nasabah  : 123240015
+Saldo             : Rp. 300000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-16
+User ID           : 16
+Nama Nasabah      : Rudi
+Rekening Nasabah  : 123240016
+Saldo             : Rp. 500000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-17
+User ID           : 17
+Nama Nasabah      : Zahra
+Rekening Nasabah  : 123240017
+Saldo             : Rp. 250000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-18
+User ID           : 18
+Nama Nasabah      : Dewi
+Rekening Nasabah  : 123240018
+Saldo             : Rp. 100000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-19
+User ID           : 19
+Nama Nasabah      : Mega
+Rekening Nasabah  : 123240019
+Saldo             : Rp. 600000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-20
+User ID           : 20
+Nama Nasabah      : Tono
+Rekening Nasabah  : 123240020
+Saldo             : Rp. 200000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-21
+User ID           : 21
+Nama Nasabah      : Wawan
+Rekening Nasabah  : 123240021
+Saldo             : Rp. 150000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-22
+User ID           : 22
+Nama Nasabah      : Sari
+Rekening Nasabah  : 123240022
+Saldo             : Rp. 200000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-23
+User ID           : 23
+Nama Nasabah      : Rudi
+Rekening Nasabah  : 123240023
+Saldo             : Rp. 300000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-24
+User ID           : 24
+Nama Nasabah      : Andi
+Rekening Nasabah  : 123240024
+Saldo             : Rp. 600000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-25
+User ID           : 25
+Nama Nasabah      : Umi
+Rekening Nasabah  : 123240025
+Saldo             : Rp. 200000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-26
+User ID           : 26
+Nama Nasabah      : Citra
+Rekening Nasabah  : 123240026
+Saldo             : Rp. 700000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-27
+User ID           : 27
+Nama Nasabah      : Xenia
+Rekening Nasabah  : 123240027
+Saldo             : Rp. 150000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-28
+User ID           : 28
+Nama Nasabah      : Yoga
+Rekening Nasabah  : 123240028
+Saldo             : Rp. 300000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-29
+User ID           : 29
+Nama Nasabah      : Nina
+Rekening Nasabah  : 123240029
+Saldo             : Rp. 200000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-30
+User ID           : 30
+Nama Nasabah      : Indah
+Rekening Nasabah  : 123240030
+Saldo             : Rp. 600000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-31
+User ID           : 31
+Nama Nasabah      : Dewi
+Rekening Nasabah  : 123240031
+Saldo             : Rp. 600000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-32
+User ID           : 32
+Nama Nasabah      : Farhan
+Rekening Nasabah  : 123240032
+Saldo             : Rp. 200000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-33
+User ID           : 33
+Nama Nasabah      : Budi
+Rekening Nasabah  : 123240033
+Saldo             : Rp. 300000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-34
+User ID           : 34
+Nama Nasabah      : Zahra
+Rekening Nasabah  : 123240034
+Saldo             : Rp. 100000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-35
+User ID           : 35
+Nama Nasabah      : Kartika
+Rekening Nasabah  : 123240035
+Saldo             : Rp. 250000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-36
+User ID           : 36
+Nama Nasabah      : Andi
+Rekening Nasabah  : 123240036
+Saldo             : Rp. 100000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-37
+User ID           : 37
+Nama Nasabah      : Nina
+Rekening Nasabah  : 123240037
+Saldo             : Rp. 300000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-38
+User ID           : 38
+Nama Nasabah      : Andi
+Rekening Nasabah  : 123240038
+Saldo             : Rp. 400000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-39
+User ID           : 39
+Nama Nasabah      : Farhan
+Rekening Nasabah  : 123240039
+Saldo             : Rp. 100000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-40
+User ID           : 40
+Nama Nasabah      : Lutfi
+Rekening Nasabah  : 123240040
+Saldo             : Rp. 700000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-41
+User ID           : 41
+Nama Nasabah      : Oka
+Rekening Nasabah  : 123240041
+Saldo             : Rp. 600000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-42
+User ID           : 42
+Nama Nasabah      : Dewi
+Rekening Nasabah  : 123240042
+Saldo             : Rp. 250000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-43
+User ID           : 43
+Nama Nasabah      : Putri
+Rekening Nasabah  : 123240043
+Saldo             : Rp. 300000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-44
+User ID           : 44
+Nama Nasabah      : Umi
+Rekening Nasabah  : 123240044
+Saldo             : Rp. 600000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-45
+User ID           : 45
+Nama Nasabah      : Dewi
+Rekening Nasabah  : 123240045
+Saldo             : Rp. 600000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-46
+User ID           : 46
+Nama Nasabah      : Citra
+Rekening Nasabah  : 123240046
+Saldo             : Rp. 700000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-47
+User ID           : 47
+Nama Nasabah      : Citra
+Rekening Nasabah  : 123240047
+Saldo             : Rp. 150000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-48
+User ID           : 48
+Nama Nasabah      : Rudi
+Rekening Nasabah  : 123240048
+Saldo             : Rp. 400000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-49
+User ID           : 49
+Nama Nasabah      : Sari
+Rekening Nasabah  : 123240049
+Saldo             : Rp. 500000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-50
+User ID           : 50
+Nama Nasabah      : Gita
+Rekening Nasabah  : 123240050
+Saldo             : Rp. 100000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-51
+User ID           : 51
+Nama Nasabah      : Dewi
+Rekening Nasabah  : 123240051
+Saldo             : Rp. 250000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-52
+User ID           : 52
+Nama Nasabah      : Lutfi
+Rekening Nasabah  : 123240052
+Saldo             : Rp. 700000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-53
+User ID           : 53
+Nama Nasabah      : Farhan
+Rekening Nasabah  : 123240053
+Saldo             : Rp. 300000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-54
+User ID           : 54
+Nama Nasabah      : Putri
+Rekening Nasabah  : 123240054
+Saldo             : Rp. 100000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-55
+User ID           : 55
+Nama Nasabah      : Citra
+Rekening Nasabah  : 123240055
+Saldo             : Rp. 150000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-56
+User ID           : 56
+Nama Nasabah      : Eka
+Rekening Nasabah  : 123240056
+Saldo             : Rp. 700000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-57
+User ID           : 57
+Nama Nasabah      : Mega
+Rekening Nasabah  : 123240057
+Saldo             : Rp. 500000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-58
+User ID           : 58
+Nama Nasabah      : Hadi
+Rekening Nasabah  : 123240058
+Saldo             : Rp. 300000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-59
+User ID           : 59
+Nama Nasabah      : Farhan
+Rekening Nasabah  : 123240059
+Saldo             : Rp. 250000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-60
+User ID           : 60
+Nama Nasabah      : Indah
+Rekening Nasabah  : 123240060
+Saldo             : Rp. 300000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-61
+User ID           : 61
+Nama Nasabah      : Citra
+Rekening Nasabah  : 123240061
+Saldo             : Rp. 250000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-62
+User ID           : 62
+Nama Nasabah      : Wawan
+Rekening Nasabah  : 123240062
+Saldo             : Rp. 200000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-63
+User ID           : 63
+Nama Nasabah      : Putri
+Rekening Nasabah  : 123240063
+Saldo             : Rp. 200000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-64
+User ID           : 64
+Nama Nasabah      : Mega
+Rekening Nasabah  : 123240064
+Saldo             : Rp. 100000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-65
+User ID           : 65
+Nama Nasabah      : Budi
+Rekening Nasabah  : 123240065
+Saldo             : Rp. 100000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-66
+User ID           : 66
+Nama Nasabah      : Budi
+Rekening Nasabah  : 123240066
+Saldo             : Rp. 150000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-67
+User ID           : 67
+Nama Nasabah      : Budi
+Rekening Nasabah  : 123240067
+Saldo             : Rp. 300000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-68
+User ID           : 68
+Nama Nasabah      : Mega
+Rekening Nasabah  : 123240068
+Saldo             : Rp. 700000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-69
+User ID           : 69
+Nama Nasabah      : Joko
+Rekening Nasabah  : 123240069
+Saldo             : Rp. 700000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-70
+User ID           : 70
+Nama Nasabah      : Oka
+Rekening Nasabah  : 123240070
+Saldo             : Rp. 250000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-71
+User ID           : 71
+Nama Nasabah      : Oka
+Rekening Nasabah  : 123240071
+Saldo             : Rp. 600000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-72
+User ID           : 72
+Nama Nasabah      : Vina
+Rekening Nasabah  : 123240072
+Saldo             : Rp. 250000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-73
+User ID           : 73
+Nama Nasabah      : Putri
+Rekening Nasabah  : 123240073
+Saldo             : Rp. 150000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-74
+User ID           : 74
+Nama Nasabah      : Farhan
+Rekening Nasabah  : 123240074
+Saldo             : Rp. 600000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-75
+User ID           : 75
+Nama Nasabah      : Gita
+Rekening Nasabah  : 123240075
+Saldo             : Rp. 50000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-76
+User ID           : 76
+Nama Nasabah      : Sari
+Rekening Nasabah  : 123240076
+Saldo             : Rp. 500000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-77
+User ID           : 77
+Nama Nasabah      : Oka
+Rekening Nasabah  : 123240077
+Saldo             : Rp. 400000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-78
+User ID           : 78
+Nama Nasabah      : Budi
+Rekening Nasabah  : 123240078
+Saldo             : Rp. 50000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-79
+User ID           : 79
+Nama Nasabah      : Rudi
+Rekening Nasabah  : 123240079
+Saldo             : Rp. 250000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-80
+User ID           : 80
+Nama Nasabah      : Gita
+Rekening Nasabah  : 123240080
+Saldo             : Rp. 300000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-81
+User ID           : 81
+Nama Nasabah      : Tono
+Rekening Nasabah  : 123240081
+Saldo             : Rp. 150000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-82
+User ID           : 82
+Nama Nasabah      : Eka
+Rekening Nasabah  : 123240082
+Saldo             : Rp. 50000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-83
+User ID           : 83
+Nama Nasabah      : Dewi
+Rekening Nasabah  : 123240083
+Saldo             : Rp. 100000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-84
+User ID           : 84
+Nama Nasabah      : Lutfi
+Rekening Nasabah  : 123240084
+Saldo             : Rp. 300000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-85
+User ID           : 85
+Nama Nasabah      : Citra
+Rekening Nasabah  : 123240085
+Saldo             : Rp. 600000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-86
+User ID           : 86
+Nama Nasabah      : Lutfi
+Rekening Nasabah  : 123240086
+Saldo             : Rp. 700000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-87
+User ID           : 87
+Nama Nasabah      : Dewi
+Rekening Nasabah  : 123240087
+Saldo             : Rp. 300000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-88
+User ID           : 88
+Nama Nasabah      : Qori
+Rekening Nasabah  : 123240088
+Saldo             : Rp. 500000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-89
+User ID           : 89
+Nama Nasabah      : Indah
+Rekening Nasabah  : 123240089
+Saldo             : Rp. 50000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-90
+User ID           : 90
+Nama Nasabah      : Qori
+Rekening Nasabah  : 123240090
+Saldo             : Rp. 600000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-91
+User ID           : 91
+Nama Nasabah      : Dewi
+Rekening Nasabah  : 123240091
+Saldo             : Rp. 400000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-92
+User ID           : 92
+Nama Nasabah      : Rudi
+Rekening Nasabah  : 123240092
+Saldo             : Rp. 500000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-93
+User ID           : 93
+Nama Nasabah      : Lutfi
+Rekening Nasabah  : 123240093
+Saldo             : Rp. 250000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-94
+User ID           : 94
+Nama Nasabah      : Joko
+Rekening Nasabah  : 123240094
+Saldo             : Rp. 150000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-95
+User ID           : 95
+Nama Nasabah      : Tono
+Rekening Nasabah  : 123240095
+Saldo             : Rp. 100000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-96
+User ID           : 96
+Nama Nasabah      : Citra
+Rekening Nasabah  : 123240096
+Saldo             : Rp. 600000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-97
+User ID           : 97
+Nama Nasabah      : Indah
+Rekening Nasabah  : 123240097
+Saldo             : Rp. 150000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-98
+User ID           : 98
+Nama Nasabah      : Qori
+Rekening Nasabah  : 123240098
+Saldo             : Rp. 200000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-99
+User ID           : 99
+Nama Nasabah      : Tono
+Rekening Nasabah  : 123240099
+Saldo             : Rp. 50000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-100
+User ID           : 100
+Nama Nasabah      : Gita
+Rekening Nasabah  : 123240100
+Saldo             : Rp. 100000.00
+Jumlah Transaksi  : 0
+----------------------------------
+
+Nasabah ke-101
+User ID           : 101
+Nama Nasabah      : doi
+Rekening Nasabah  : 123240101
+Saldo             : Rp. 25000.00
+Jumlah Transaksi  : 1
+Riwayat Transaksi :
+  1. Transfer keluar -Rp25000
+----------------------------------
+
