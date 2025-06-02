@@ -289,7 +289,7 @@ void daftar()
         getline(cin, user1[pengguna].password);
         inputPin();
 
-        // Set saldo awal ke 50.000
+        // anggep kalo ini dari dia bukak rekening di bank terus diarahkan buat bikin mbanking sekalian :)
         user1[pengguna].balance = 50000;
         balance[pengguna] = 50000;
 
