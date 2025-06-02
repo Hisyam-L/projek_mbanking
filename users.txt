@@ -1,6 +1,6 @@
-Oka|oka.kurniawan27@outlook.com|oka|5582|1|123240001|300000
-Xenia|xenia.maulana30@mail.com|xenia|5779|2|123240002|250000
-Joko|joko.kurniawan45@yahoo.com|joko|4413|3|123240003|50000
+Oka|oka.kurniawan27@outlook.com|oka|5582|1|123240001|315000
+Xenia|xenia.maulana30@mail.com|xenia|5779|2|123240002|276000
+Joko|joko.kurniawan45@yahoo.com|joko|4413|3|123240003|62000
 Oka|oka.santoso17@outlook.com|oka|1217|4|123240004|300000
 Mega|mega.permata98@gmail.com|mega|9167|5|123240005|50000
 Lutfi|lutfi.wibowo96@gmail.com|lutfi|1413|6|123240006|300000
@@ -98,4 +98,4 @@ Indah|indah.utami6@yahoo.com|indah|8822|97|123240097|150000
 Qori|qori.wibowo48@yahoo.com|qori|9957|98|123240098|200000
 Tono|tono.suryani59@outlook.com|tono|1459|99|123240099|50000
 Gita|gita.suryani15@gmail.com|gita|5668|100|123240100|100000
-doi|dio|1234|1234|101|123240101|50000
+doi|123|123|1234|101|123240101|50000

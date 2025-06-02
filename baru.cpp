@@ -11,7 +11,7 @@ struct mutasi
     int nominal;
     int rekTujuan;
     string keterangan;
-    int jenisTransaksi; // 1 = setor, 2 = tarik, 3 = transfer
+    int jenisTransaksi;
 };
 
 struct user
@@ -19,120 +19,17 @@ struct user
     string nama, email, password;
     int pin, UserId, noRekening;
     double balance;
-    mutasi riwayatTransaksi[100]; // array mutasi untuk setiap user
+    mutasi riwayatTransaksi[100]; 
     int mutasi_count = 0;
 };
 
-// int pengguna = 0, lastUserID = 0, lastNoRek = 123240000;
 char ulang;
-user user1[max] = {
-    {"User1", "user1@mail.com", "pass1234", 1234, 123240001, 1, 500000, {}, 0},
-    {"User2", "user2@mail.com", "pass1234", 2346, 123240002, 2, 150000, {}, 0},
-    {"User3", "user3@mail.com", "pass1234", 3458, 123240003, 3, 300000, {}, 0},
-    {"User4", "user4@mail.com", "pass1234", 4567, 123240004, 4, 700000, {}, 0},
-    {"User5", "user5@mail.com", "pass1234", 5679, 123240005, 5, 250000, {}, 0},
-    {"User6", "user6@mail.com", "pass1234", 6791, 123240006, 6, 450000, {}, 0},
-    {"User7", "user7@mail.com", "pass1234", 7890, 123240007, 7, 100000, {}, 0},
-    {"User8", "user8@mail.com", "pass1234", 8902, 123240008, 8, 350000, {}, 0},
-    {"User9", "user9@mail.com", "pass1234", 9014, 123240009, 9, 600000, {}, 0},
-    {"User10", "user10@mail.com", "pass1234", 1122, 123240010, 10, 200000, {}, 0},
-    {"User11", "user11@mail.com", "pass1234", 1235, 123240011, 11, 800000, {}, 0},
-    {"User12", "user12@mail.com", "pass1234", 2347, 123240012, 12, 300000, {}, 0},
-    {"User13", "user13@mail.com", "pass1234", 3456, 123240013, 13, 400000, {}, 0},
-    {"User14", "user14@mail.com", "pass1234", 4568, 123240014, 14, 150000, {}, 0},
-    {"User15", "user15@mail.com", "pass1234", 5680, 123240015, 15, 500000, {}, 0},
-    {"User16", "user16@mail.com", "pass1234", 6789, 123240016, 16, 350000, {}, 0},
-    {"User17", "user17@mail.com", "pass1234", 7891, 123240017, 17, 600000, {}, 0},
-    {"User18", "user18@mail.com", "pass1234", 8903, 123240018, 18, 250000, {}, 0},
-    {"User19", "user19@mail.com", "pass1234", 9012, 123240019, 19, 450000, {}, 0},
-    {"User20", "user20@mail.com", "pass1234", 1123, 123240020, 20, 550000, {}, 0},
-    {"User21", "user21@mail.com", "pass1234", 1236, 123240021, 21, 100000, {}, 0},
-    {"User22", "user22@mail.com", "pass1234", 2345, 123240022, 22, 300000, {}, 0},
-    {"User23", "user23@mail.com", "pass1234", 3457, 123240023, 23, 700000, {}, 0},
-    {"User24", "user24@mail.com", "pass1234", 4569, 123240024, 24, 400000, {}, 0},
-    {"User25", "user25@mail.com", "pass1234", 5678, 123240025, 25, 600000, {}, 0},
-    {"User26", "user26@mail.com", "pass1234", 6790, 123240026, 26, 200000, {}, 0},
-    {"User27", "user27@mail.com", "pass1234", 7892, 123240027, 27, 450000, {}, 0},
-    {"User28", "user28@mail.com", "pass1234", 8901, 123240028, 28, 150000, {}, 0},
-    {"User29", "user29@mail.com", "pass1234", 9013, 123240029, 29, 500000, {}, 0},
-    {"User30", "user30@mail.com", "pass1234", 1124, 123240030, 30, 350000, {}, 0},
-    {"User31", "user31@mail.com", "pass1234", 1234, 123240031, 31, 600000, {}, 0},
-    {"User32", "user32@mail.com", "pass1234", 2346, 123240032, 32, 200000, {}, 0},
-    {"User33", "user33@mail.com", "pass1234", 3458, 123240033, 33, 550000, {}, 0},
-    {"User34", "user34@mail.com", "pass1234", 4567, 123240034, 34, 150000, {}, 0},
-    {"User35", "user35@mail.com", "pass1234", 5679, 123240035, 35, 450000, {}, 0},
-    {"User36", "user36@mail.com", "pass1234", 6791, 123240036, 36, 300000, {}, 0},
-    {"User37", "user37@mail.com", "pass1234", 7890, 123240037, 37, 700000, {}, 0},
-    {"User38", "user38@mail.com", "pass1234", 8902, 123240038, 38, 400000, {}, 0},
-    {"User39", "user39@mail.com", "pass1234", 9014, 123240039, 39, 250000, {}, 0},
-    {"User40", "user40@mail.com", "pass1234", 1122, 123240040, 40, 500000, {}, 0},
-    {"User41", "user41@mail.com", "pass1234", 1235, 123240041, 41, 100000, {}, 0},
-    {"User42", "user42@mail.com", "pass1234", 2347, 123240042, 42, 300000, {}, 0},
-    {"User43", "user43@mail.com", "pass1234", 3456, 123240043, 43, 700000, {}, 0},
-    {"User44", "user44@mail.com", "pass1234", 4568, 123240044, 44, 400000, {}, 0},
-    {"User45", "user45@mail.com", "pass1234", 5680, 123240045, 45, 600000, {}, 0},
-    {"User46", "user46@mail.com", "pass1234", 6789, 123240046, 46, 200000, {}, 0},
-    {"User47", "user47@mail.com", "pass1234", 7891, 123240047, 47, 550000, {}, 0},
-    {"User48", "user48@mail.com", "pass1234", 8903, 123240048, 48, 250000, {}, 0},
-    {"User49", "user49@mail.com", "pass1234", 9012, 123240049, 49, 450000, {}, 0},
-    {"User50", "user50@mail.com", "pass1234", 1123, 123240050, 50, 150000, {}, 0},
-    {"User51", "user51@mail.com", "pass1234", 1236, 123240051, 51, 500000, {}, 0},
-    {"User52", "user52@mail.com", "pass1234", 2345, 123240052, 52, 350000, {}, 0},
-    {"User53", "user53@mail.com", "pass1234", 3457, 123240053, 53, 600000, {}, 0},
-    {"User54", "user54@mail.com", "pass1234", 4569, 123240054, 54, 200000, {}, 0},
-    {"User55", "user55@mail.com", "pass1234", 5678, 123240055, 55, 550000, {}, 0},
-    {"User56", "user56@mail.com", "pass1234", 6790, 123240056, 56, 150000, {}, 0},
-    {"User57", "user57@mail.com", "pass1234", 7892, 123240057, 57, 450000, {}, 0},
-    {"User58", "user58@mail.com", "pass1234", 8901, 123240058, 58, 300000, {}, 0},
-    {"User59", "user59@mail.com", "pass1234", 9013, 123240059, 59, 700000, {}, 0},
-    {"User60", "user60@mail.com", "pass1234", 1124, 123240060, 60, 400000, {}, 0},
-    {"User61", "user61@mail.com", "pass1234", 1234, 123240061, 61, 250000, {}, 0},
-    {"User62", "user62@mail.com", "pass1234", 2346, 123240062, 62, 500000, {}, 0},
-    {"User63", "user63@mail.com", "pass1234", 3458, 123240063, 63, 100000, {}, 0},
-    {"User64", "user64@mail.com", "pass1234", 4567, 123240064, 64, 300000, {}, 0},
-    {"User65", "user65@mail.com", "pass1234", 5679, 123240065, 65, 700000, {}, 0},
-    {"User66", "user66@mail.com", "pass1234", 6791, 123240066, 66, 400000, {}, 0},
-    {"User67", "user67@mail.com", "pass1234", 7890, 123240067, 67, 600000, {}, 0},
-    {"User68", "user68@mail.com", "pass1234", 8902, 123240068, 68, 200000, {}, 0},
-    {"User69", "user69@mail.com", "pass1234", 9014, 123240069, 69, 550000, {}, 0},
-    {"User70", "user70@mail.com", "pass1234", 1122, 123240070, 70, 250000, {}, 0},
-    {"User71", "user71@mail.com", "pass1234", 1235, 123240071, 71, 450000, {}, 0},
-    {"User72", "user72@mail.com", "pass1234", 2347, 123240072, 72, 150000, {}, 0},
-    {"User73", "user73@mail.com", "pass1234", 3456, 123240073, 73, 500000, {}, 0},
-    {"User74", "user74@mail.com", "pass1234", 4568, 123240074, 74, 350000, {}, 0},
-    {"User75", "user75@mail.com", "pass1234", 5680, 123240075, 75, 600000, {}, 0},
-    {"User76", "user76@mail.com", "pass1234", 6789, 123240076, 76, 200000, {}, 0},
-    {"User77", "user77@mail.com", "pass1234", 7891, 123240077, 77, 550000, {}, 0},
-    {"User78", "user78@mail.com", "pass1234", 8903, 123240078, 78, 150000, {}, 0},
-    {"User79", "user79@mail.com", "pass1234", 9012, 123240079, 79, 450000, {}, 0},
-    {"User80", "user80@mail.com", "pass1234", 1123, 123240080, 80, 300000, {}, 0},
-    {"User81", "user81@mail.com", "pass1234", 1236, 123240081, 81, 700000, {}, 0},
-    {"User82", "user82@mail.com", "pass1234", 2345, 123240082, 82, 400000, {}, 0},
-    {"User83", "user83@mail.com", "pass1234", 3457, 123240083, 83, 250000, {}, 0},
-    {"User84", "user84@mail.com", "pass1234", 4569, 123240084, 84, 500000, {}, 0},
-    {"User85", "user85@mail.com", "pass1234", 5678, 123240085, 85, 100000, {}, 0},
-    {"User86", "user86@mail.com", "pass1234", 6790, 123240086, 86, 300000, {}, 0},
-    {"User87", "user87@mail.com", "pass1234", 7892, 123240087, 87, 700000, {}, 0},
-    {"User88", "user88@mail.com", "pass1234", 8901, 123240088, 88, 400000, {}, 0},
-    {"User89", "user89@mail.com", "pass1234", 9013, 123240089, 89, 600000, {}, 0},
-    {"User90", "user90@mail.com", "pass1234", 1124, 123240090, 90, 200000, {}, 0},
-    {"User91", "user91@mail.com", "pass1234", 1234, 123240091, 91, 550000, {}, 0},
-    {"User92", "user92@mail.com", "pass1234", 2346, 123240092, 92, 250000, {}, 0},
-    {"User93", "user93@mail.com", "pass1234", 3458, 123240093, 93, 450000, {}, 0},
-    {"User94", "user94@mail.com", "pass1234", 4567, 123240094, 94, 150000, {}, 0},
-    {"User95", "user95@mail.com", "pass1234", 5679, 123240095, 95, 500000, {}, 0},
-    {"User96", "user96@mail.com", "pass1234", 6791, 123240096, 96, 350000, {}, 0},
-    {"User97", "user97@mail.com", "pass1234", 7890, 123240097, 97, 600000, {}, 0},
-    {"User98", "user98@mail.com", "pass1234", 8902, 123240098, 98, 200000, {}, 0},
-    {"User99", "user99@mail.com", "pass1234", 9014, 123240099, 99, 550000, {}, 0},
-    {"User100", "user100@mail.com", "pass1234", 1122, 123240100, 100, 150000, {}, 0},
-};
-
-int pengguna = 100;
+user user1[max];
+int pengguna = 0;
 int lastUserID = user1[pengguna - 1].UserId;
 int lastNoRek = user1[pengguna - 1].noRekening;
 
-double balance[max]; // ganti nama variabel
+double balance[max];
 
 struct bank
 {
@@ -155,11 +52,14 @@ void simpan_transaksi();
 void data_transaksi(int UserID);
 void loadUsers();
 void saveUsers();
+void saveTransaksi();
+void loadTransaksi();
 
 
 int main()
 {
     loadUsers();
+    loadTransaksi();
     menu();
 }
 
@@ -319,59 +219,86 @@ void inputPin()
 void menuUtama(int UserID)
 {
     int pilihan;
-    bool nabil = false;
+    bool ketemu = false;
+    int milih;
+    bool bener = false;
     do
     {
         system("cls");
-        cout << "+=======================+" << endl;
-        cout << "|      MENU UTAMA!      |" << endl;
-        cout << "+=======================+" << endl;
-        cout << "| 1. Setor Tunai        |" << endl;
-        cout << "| 2. Tarik Tunai        |" << endl;
-        cout << "| 3. Transfer           |" << endl;
-        cout << "| 4. Riwayat Transaksi  |" << endl;
-        cout << "| 5. Tampilkan Data     |" << endl;
-        cout << "| 6. Arsip Transaksi    |" << endl;
-        cout << "| 7. Keluar             |" << endl;
-        cout << "+=======================+" << endl;
+        cout << "+===========================+" << endl;
+        cout << "|         MENU UTAMA!       |" << endl;
+        cout << "+===========================+" << endl;
+        cout << "| 1. Data Rekening          |" << endl;
+        cout << "| 2. Transaksi Tanpa Kartu  |" << endl;
+        cout << "| 3. Transfer               |" << endl;
+        cout << "| 4. Riwayat Transaksi      |" << endl;
+        cout << "| 6. Arsip Transaksi        |" << endl;
+        cout << "| 7. Keluar                 |" << endl;
+        cout << "+===========================+" << endl;
         cout << "Pilih menu : ";
         cin >> pilihan;
         cin.ignore();
         switch (pilihan)
         {
         case 1:
-            setor(UserID);
-            nabil = false;
+            dataUser(UserID);
+            ketemu = false;
             break;
+            
         case 2:
-            tarik(UserID);
-            nabil = false;
+            do {
+                system("cls");
+                cout << "+=======================+" << endl;
+                cout << "|        Cardless       |" << endl;
+                cout << "+=======================+" << endl;
+                cout << "|1. Setor Tunai         |" << endl;
+                cout << "|2. Tarik Tunai         |" << endl; 
+                cout << "+=======================+" << endl;
+                cout << "Pilihan Anda (1/2) : ";
+                cin >> milih;
+
+                if (milih == 1) {
+                    setor(UserID);
+                    bener = true;
+                } else if (milih == 2) {
+                    tarik(UserID);
+                    bener = true;
+                } else {
+                    cout << "Pilihan Anda Tidak Valid";
+                    getch();
+                    bener = false; 
+                }
+            } while (bener == false);
+
+            ketemu = false;
             break;
+
+            
         case 3:
             transfer(UserID);
-            nabil = false;
+            ketemu = false;
             break;
+            
         case 4:
             riwayat(UserID);
-            nabil = false;
+            ketemu = false;
             break;
         case 5:
-            dataUser(UserID);
-            nabil = false;
+            ketemu = false;
             break;
         case 6:
             data_transaksi(UserID);
             break;
         case 7:
             menu();
-            nabil = true;
+            ketemu = true;
             break;
         default:
             cout << "Pilihan tidak valid!";
             getch();
             menuUtama(UserID);
         }
-    } while (nabil == false);
+    } while (ketemu == false);
 }
 
 void setor(int UserID)
@@ -404,6 +331,8 @@ void setor(int UserID)
     }
     getch();
     simpan_transaksi();
+    saveUsers();
+    saveTransaksi();
 }
 
 void tarik(int UserID)
@@ -441,6 +370,8 @@ void tarik(int UserID)
 
     getch();
     simpan_transaksi();
+    saveUsers();
+    saveTransaksi();
 }
 
 void cariDataUser(int userID)
@@ -654,9 +585,11 @@ void transfer(int UserID)
 
     simpan_transaksi();
     getch();
+
+    saveUsers();
+    saveTransaksi();
 }
 
-// Fungsi sorting untuk riwayat transaksi
 void sortTransaksi(mutasi arr[], int n, bool ascending)
 {
     for (int i = 0; i < n - 1; i++)
@@ -833,7 +766,6 @@ void simpan_transaksi()
     transaksi.close();
 }
 
-// Perbaikan fungsi data_transaksi() untuk menampilkan hanya data nasabah yang login
 void data_transaksi(int UserID)
 {
     ifstream riwayat;
@@ -922,6 +854,61 @@ void saveUsers() {
              << user1[i].UserId << '|'
              << user1[i].noRekening << '|'
              << user1[i].balance << endl;
+    }
+
+    file.close();
+}
+
+void saveTransaksi() {
+    ofstream file("transaksi.txt");
+
+    for (int i = 0; i < pengguna; i++) {
+        if (user1[i].mutasi_count == 0) continue;
+        file << "UserID:" << user1[i].UserId << endl;
+
+        for (int j = 0; j < user1[i].mutasi_count; j++) {
+            file << j + 1 << '|'
+                 << user1[i].riwayatTransaksi[j].keterangan << '|'
+                 << user1[i].riwayatTransaksi[j].rekTujuan << '|'
+                 << user1[i].riwayatTransaksi[j].nominal << endl;
+        }
+    }
+
+    file.close();
+}
+
+void loadTransaksi() {
+    ifstream file("transaksi.txt");
+    string line;
+    int currentUser = -1;
+
+    while (getline(file, line)) {
+        if (line.rfind("UserID:", 0) == 0) {
+            int id = stoi(line.substr(7));
+            for (int i = 0; i < pengguna; i++) {
+                if (user1[i].UserId == id) {
+                    currentUser = i;
+                    user1[i].mutasi_count = 0;
+                    break;
+                }
+            }
+        } else if (currentUser != -1) {
+            stringstream ss(line);
+            string no, ket, rekStr, nomStr;
+            getline(ss, no, '|');
+            getline(ss, ket, '|');
+            getline(ss, rekStr, '|');
+            getline(ss, nomStr, '|');
+
+            int idx = user1[currentUser].mutasi_count++;
+            user1[currentUser].riwayatTransaksi[idx].keterangan = ket;
+            user1[currentUser].riwayatTransaksi[idx].rekTujuan = stoi(rekStr);
+            user1[currentUser].riwayatTransaksi[idx].nominal = stoi(nomStr);
+            user1[currentUser].riwayatTransaksi[idx].jenisTransaksi =
+                ket == "Setor tunai" ? 1 :
+                ket == "Tarik tunai" ? 2 :
+                ket == "Biaya admin transfer ke bank lain" ? 4 : 3;
+        }
     }
 
     file.close();
