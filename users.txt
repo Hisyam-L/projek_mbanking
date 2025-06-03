@@ -98,5 +98,6 @@ Indah|indah.utami6@yahoo.com|indah|8822|97|123240097|150000
 Qori|qori.wibowo48@yahoo.com|qori|9957|98|123240098|200000
 Tono|tono.suryani59@outlook.com|tono|1459|99|123240099|50000
 Gita|gita.suryani15@gmail.com|gita|5668|100|123240100|100000
-doi|123|123|1234|101|123240101|50000
+doi|123|123|1234|101|123240101|0
 Mulyono|widodo@gmail.com|jokooo|1234|102|123240102|0
+ewe|ewe|1234|5678|103|123240103|60000

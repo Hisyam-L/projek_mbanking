@@ -809,8 +809,8 @@ Nasabah ke-101
 User ID           : 101
 Nama Nasabah      : doi
 Rekening Nasabah  : 123240101
-Saldo             : Rp. 50000.00
-Jumlah Transaksi  : 6
+Saldo             : Rp. 0.00
+Jumlah Transaksi  : 12
 Riwayat Transaksi :
   1. Transfer keluar -Rp15000
   2. Transfer keluar -Rp11000
@@ -818,6 +818,12 @@ Riwayat Transaksi :
   4. Setor tunai +Rp20000
   5. Tarik tunai +Rp20000
   6. Setor tunai +Rp50000
+  7. Transfer ke bank lain -Rp13000
+  8. Biaya admin transfer -Rp5000
+  9. Transfer ke bank lain -Rp10000
+  10. Biaya admin transfer -Rp5000
+  11. Setor tunai +Rp33000
+  12. Tarik tunai +Rp33000
 ----------------------------------
 
 Nasabah ke-102
@@ -831,6 +837,16 @@ Riwayat Transaksi :
   2. Tarik tunai +Rp5000
   3. Transfer keluar -Rp25000
   4. Transfer ke bank lain -Rp20000
-  5. Biaya admin transfer ke bank lain -Rp5000
+  5. Biaya admin transfer -Rp5000
+----------------------------------
+
+Nasabah ke-103
+User ID           : 103
+Nama Nasabah      : ewe
+Rekening Nasabah  : 123240103
+Saldo             : Rp. 60000.00
+Jumlah Transaksi  : 1
+Riwayat Transaksi :
+  1. Setor tunai +Rp10000
 ----------------------------------
 
