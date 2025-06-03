@@ -232,8 +232,8 @@ void menuUtama(int UserID)
         cout << "| 2. Transaksi Tanpa Kartu  |" << endl;
         cout << "| 3. Transfer               |" << endl;
         cout << "| 4. Riwayat Transaksi      |" << endl;
-        cout << "| 6. Arsip Transaksi        |" << endl;
-        cout << "| 7. Keluar                 |" << endl;
+        cout << "| 5. Arsip Transaksi        |" << endl;
+        cout << "| 6. Keluar                 |" << endl;
         cout << "+===========================+" << endl;
         cout << "Pilih menu : ";
         cin >> pilihan;
@@ -284,12 +284,9 @@ void menuUtama(int UserID)
             ketemu = false;
             break;
         case 5:
-            ketemu = false;
-            break;
-        case 6:
             data_transaksi(UserID);
             break;
-        case 7:
+        case 6:
             menu();
             ketemu = true;
             break;
@@ -455,7 +452,6 @@ void transfer(int UserID)
     cout << "Pilihan : ";
     cin >> transferPilihan;
 
-    // Validasi pilihan transfer
     if (transferPilihan != 1 && transferPilihan != 2)
     {
         cout << "Pilihan tidak valid!" << endl;
@@ -468,9 +464,7 @@ void transfer(int UserID)
         cout << "Masukkan nomor rekening tujuan: ";
         cin >> rekTujuan;
         
-        // Cek transfer ke rekening sendiri
         
-        // Cari rekening tujuan hanya jika transfer ke bank yang sama
         if (transferPilihan == 1)
         {
             if (rekTujuan == user1[UserID - 1].noRekening)
@@ -478,9 +472,7 @@ void transfer(int UserID)
                 cout << "Tidak bisa transfer ke rekening sendiri!" << endl;
                 benar = false;
                 getch();
-                // return;
             }
-            // Jika transfer ke bank yang sama, validasi rekening tujuan
             for (int i = 0; i < pengguna; i++)
             {
                 if (user1[i].noRekening == rekTujuan)
@@ -502,7 +494,6 @@ void transfer(int UserID)
     cout << "Masukkan jumlah transfer: Rp.";
     cin >> jumlahTransfer;
 
-    // Validasi jumlah transfer
     if (jumlahTransfer < 10000)
     {
         cout << "Minimum transfer adalah Rp10.000" << endl;
@@ -510,12 +501,10 @@ void transfer(int UserID)
         return;
     }
 
-    // Hitung total yang akan dikurangi (termasuk biaya admin jika transfer antar bank)
     double totalDikurangi = jumlahTransfer;
     int biayaAdmin = (transferPilihan == 2) ? 5000 : 0;
     totalDikurangi += biayaAdmin;
 
-    // Cek saldo mencukupi
     if (totalDikurangi > user1[UserID - 1].balance)
     {
         cout << "Saldo tidak mencukupi." << endl;
@@ -528,38 +517,33 @@ void transfer(int UserID)
         return;
     }
 
-    // Lakukan transfer
-    user1[UserID - 1].balance -= jumlahTransfer; // Kurangi saldo pengirim
+    user1[UserID - 1].balance -= jumlahTransfer; 
 
-    // Tambah saldo penerima hanya jika transfer ke bank yang sama dan rekening tujuan valid
     if (transferPilihan == 1 && indexTujuan != -1)
     {
         user1[indexTujuan].balance += jumlahTransfer;
 
-        // Catat riwayat transaksi untuk PENERIMA
         int idxPenerima = user1[indexTujuan].mutasi_count;
         user1[indexTujuan].riwayatTransaksi[idxPenerima] = {
-            (int)jumlahTransfer, // nominal positif (pemasukan)
+            (int)jumlahTransfer, 
             user1[UserID - 1].noRekening,
             "Transfer masuk",
-            3 // jenis: transfer
+            3 
         };
         user1[indexTujuan].mutasi_count++;
     }
 
-    // Catat riwayat transaksi untuk PENGIRIM
     int idxPengirim = user1[UserID - 1].mutasi_count;
     string keteranganTransfer = (transferPilihan == 1) ? "Transfer keluar" : "Transfer ke bank lain";
 
     user1[UserID - 1].riwayatTransaksi[idxPengirim] = {
-        -(int)jumlahTransfer, // nominal negatif (pengeluaran)
+        -(int)jumlahTransfer, 
         rekTujuan,
         keteranganTransfer,
-        3 // jenis: transfer
+        3 
     };
     user1[UserID - 1].mutasi_count++;
 
-    // Jika ada biaya admin, catat sebagai transaksi terpisah
     if (biayaAdmin > 0)
     {
         user1[UserID - 1].balance -= biayaAdmin;
@@ -567,9 +551,9 @@ void transfer(int UserID)
         int idxBiayaAdmin = user1[UserID - 1].mutasi_count;
         user1[UserID - 1].riwayatTransaksi[idxBiayaAdmin] = {
             -biayaAdmin,
-            0, // tidak ada rekening tujuan
+            0, 
             "Biaya admin transfer",
-            4 // JENIS BARU: admin fee
+            4 
         };
         user1[UserID - 1].mutasi_count++;
 
@@ -621,7 +605,7 @@ void riwayat(int UserID)
     int count = user1[userIndex].mutasi_count;
     mutasi tempRiwayat[100];
 
-    // Salin riwayat
+   
     for (int i = 0; i < count; i++)
     {
         tempRiwayat[i] = user1[userIndex].riwayatTransaksi[i];
@@ -658,7 +642,6 @@ void riwayat(int UserID)
                 string tandaNominal = "";
                 int nominal = tempRiwayat[i].nominal;
 
-                // Penentuan jenis
                 if (tempRiwayat[i].jenisTransaksi == 1) // Setor
                 {
                     jenis = "Setor tunai";
@@ -676,13 +659,11 @@ void riwayat(int UserID)
                     jenis = "Biaya admin transfer ke bank lain";
                 }
 
-                // Tentukan tanda berdasarkan nilai nominal (positif atau negatif)
                 if (nominal >= 0)
                     tandaNominal = "+";
                 else
                     tandaNominal = "-";
 
-                // Tampilkan informasi rekening untuk transfer (jika sesuai)
                 cout << (i + 1) << ". " << jenis;
 
                 if (tempRiwayat[i].rekTujuan != 0 && tempRiwayat[i].jenisTransaksi == 3)
@@ -696,7 +677,6 @@ void riwayat(int UserID)
                 if (tempRiwayat[i].jenisTransaksi == 1 && tempRiwayat[i].rekTujuan != 0 &&
                     tempRiwayat[i].rekTujuan != user1[userIndex].noRekening)
                 {
-                    // Tampilkan info rekening setor jika bukan setor ke sendiri
                     cout << " ";
                     if (tempRiwayat[i].nominal < 0)
                         cout << "ke " << tempRiwayat[i].rekTujuan;
@@ -777,28 +757,22 @@ void data_transaksi(int UserID)
     cout << "=================================================" << endl
          << endl;
 
-    // Variabel untuk menandai apakah sudah menemukan data user yang login
     bool found = false;
-    // Variabel untuk menandai apakah sudah melewati data user yang login
     bool passed = false;
 
     while (getline(riwayat, line))
     {
-        // Cek apakah line berisi User ID yang sedang login
         if (line.find("User ID           : " + to_string(UserID)) != string::npos)
         {
             found = true;
         }
 
-        // Cek apakah sudah melewati data user yang login
-        // (ketika menemukan header nasabah berikutnya atau akhir file)
         if (found && (line.find("Nasabah ke-") != string::npos) &&
             line.find("Nasabah ke-" + to_string(UserID)) == string::npos)
         {
             passed = true;
         }
 
-        // Tampilkan hanya data user yang login
         if (found && !passed)
         {
             cout << line << endl;

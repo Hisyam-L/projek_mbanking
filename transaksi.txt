@@ -1,5 +1,6 @@
 UserID:1
 1|Transfer masuk|123240101|15000
+2|Transfer masuk|123240102|25000
 UserID:2
 1|Transfer masuk|123240101|11000
 UserID:3
@@ -11,3 +12,9 @@ UserID:101
 4|Setor tunai|123240101|20000
 5|Tarik tunai|123240101|20000
 6|Setor tunai|123240101|50000
+UserID:102
+1|Setor tunai|123240102|5000
+2|Tarik tunai|123240102|5000
+3|Transfer keluar|123240001|-25000
+4|Transfer ke bank lain|20001|-20000
+5|Biaya admin transfer|0|-5000

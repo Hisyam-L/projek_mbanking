@@ -2,10 +2,11 @@ Nasabah ke-1
 User ID           : 1
 Nama Nasabah      : Oka
 Rekening Nasabah  : 123240001
-Saldo             : Rp. 315000.00
-Jumlah Transaksi  : 1
+Saldo             : Rp. 340000.00
+Jumlah Transaksi  : 2
 Riwayat Transaksi :
   1. Transfer masuk +Rp15000
+  2. Transfer masuk +Rp25000
 ----------------------------------
 
 Nasabah ke-2
@@ -817,5 +818,19 @@ Riwayat Transaksi :
   4. Setor tunai +Rp20000
   5. Tarik tunai +Rp20000
   6. Setor tunai +Rp50000
+----------------------------------
+
+Nasabah ke-102
+User ID           : 102
+Nama Nasabah      : Mulyono
+Rekening Nasabah  : 123240102
+Saldo             : Rp. 0.00
+Jumlah Transaksi  : 5
+Riwayat Transaksi :
+  1. Setor tunai +Rp5000
+  2. Tarik tunai +Rp5000
+  3. Transfer keluar -Rp25000
+  4. Transfer ke bank lain -Rp20000
+  5. Biaya admin transfer ke bank lain -Rp5000
 ----------------------------------
 

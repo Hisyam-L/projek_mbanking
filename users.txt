@@ -1,4 +1,4 @@
-Oka|oka.kurniawan27@outlook.com|oka|5582|1|123240001|315000
+Oka|oka.kurniawan27@outlook.com|oka|5582|1|123240001|340000
 Xenia|xenia.maulana30@mail.com|xenia|5779|2|123240002|276000
 Joko|joko.kurniawan45@yahoo.com|joko|4413|3|123240003|62000
 Oka|oka.santoso17@outlook.com|oka|1217|4|123240004|300000
@@ -99,3 +99,4 @@ Qori|qori.wibowo48@yahoo.com|qori|9957|98|123240098|200000
 Tono|tono.suryani59@outlook.com|tono|1459|99|123240099|50000
 Gita|gita.suryani15@gmail.com|gita|5668|100|123240100|100000
 doi|123|123|1234|101|123240101|50000
+Mulyono|widodo@gmail.com|jokooo|1234|102|123240102|0
